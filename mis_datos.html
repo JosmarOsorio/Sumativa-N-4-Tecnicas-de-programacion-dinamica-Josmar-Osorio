@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Datos</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="mis_datos.html">Mis datos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="consulta_y_pago.html">Consulta y Pago</a>
+            </li>
+        </ul>
+    </header>
+    <section class="seccionInicio1">
+        <div>
+            <img src="img/telephone-fill.svg" alt="">
+            <p><strong>Contáctanos</strong> <br>
+                0421-0001122</p>
+        </div>
+        <div>
+            <img src="img/envelope-at-fill.svg" alt="">
+            <p><strong>Pide una cita</strong> <br>
+                info@gmail.com</p>
+        </div>
+        <div>
+            <img src="img/clock-fill.svg" alt="">
+            <p><strong>Horario de atención</strong> <br>
+                Lun-Vie : 8:00am - 6:00pm</p>
+        </div>
+    </section>
+    <section class="seccionMisDatos1">
+        <div>
+            <h2>Estamos para Servirle</h2>
+            <p>A continuación, encontrarás un formulario diseñado para recopilar tus datos de manera eficiente y segura.
+                Al
+                completar los campos proporcionados, podrás facilitar el seguimiento de tu información personal o de
+                contacto. Una vez que hayas enviado tus datos, estos se organizarán y presentarán en una tabla clara y
+                accesible, permitiéndote visualizar la información de manera estructurada y ordenada. Este proceso no
+                solo
+                asegura que tus datos se manejen con precisión, sino que también te brinda la capacidad de acceder a
+                ellos
+                fácilmente para futuras referencias o actualizaciones. Para mas informacion y una anetcnion mas
+                personalizada puedes pedir una cita con alguno de nuestros especialistas llenando un formulario muy
+                sencillo en nuestra páfina Consulta y Pago:</p>
+            <button class="btn btn-primary" type="button"><a href="consulta_y_pago.html">PIDE TU CITA YA</a></button>
+        </div>
+    </section>
+    <section class="seccionMisDatos2">
+        <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">Nombres</label>
+                <input type="text" class="form-control" id="validationCustom01" placeholder="Ej: Josmar Alexander"
+                    required>
+                <div class="valid-feedback">
+                    Nombres Válidos
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="validationCustom02" class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="validationCustom02" placeholder="Ej: Osorio Diaz" required>
+                <div class="valid-feedback">
+                    Apellidos Válidos
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="validationCustomUsername" class="form-label">Correo Electrónico</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input type="email" class="form-control" id="validationCustomUsername"
+                        aria-describedby="inputGroupPrepend" placeholder="Ej: ejemplo@gmail.com" required>
+                    <div class="invalid-feedback">
+                        Correo Invalido
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="validationCustom03" class="form-label">Ciudad</label>
+                <input type="text" class="form-control" id="validationCustom03" placeholder="Ej: Caracas" required>
+                <div class="invalid-feedback">
+                    Ciudad Invalida
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="validationTextarea" class="form-label">Razón de Ingreso</label>
+                <textarea class="form-control" id="validationTextarea" placeholder="Ej: Limpieza Dental."
+                    required></textarea>
+                <div class="invalid-feedback">
+                    Por favor agregue una descripcion de su razón de ingreso de datos
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Enviar datos</button>
+            </div>
+        </form>
+    </section>
+    <footer>
+        <!--Parte izquierda del footer-->
+        <div id="left-footer"><!--Creamos un menu de navegacion simple para navegar desde el footer-->
+            <h3>Atajos</h3>
+            <ul class="atajos">
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </div>
+        <!--Creamos la parte derecha del footer-->
+        <div id="right-footer"><!--Creamos un menu para compartir las redes sociales-->
+            <h3>Sígenos en</h3>
+            <div id="social-media-footer">
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/?locale=es_LA" target="_blank">
+                            <img class="icono" src="img/facebook.png" alt="icono facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.instagram.com" target="_blank">
+                            <img class="icono" src="img/instragram.png" alt="icono instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+                            <img class="icono" src="img/whatsapp.png" alt="icono whatsapp">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p>Sitio web desarrollado por Josmar Osorio</p>
+        </div>
+    </footer>
+    <script type="module" src="js/validacion.js"></script>
+</body>
+
+</html>

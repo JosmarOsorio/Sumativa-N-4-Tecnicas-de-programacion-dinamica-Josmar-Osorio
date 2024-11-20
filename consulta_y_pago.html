@@ -1,11 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Consulta y pago</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
 </head>
+
 <body>
-    oa
+    <header>
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="mis_datos.html">Mis datos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="consulta_y_pago.html">Consulta y Pago</a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <section class="seccionInicio1">
+            <div>
+                <img src="img/telephone-fill.svg" alt="">
+                <p><strong>Contáctanos</strong> <br>
+                    0421-0001122</p>
+            </div>
+            <div>
+                <img src="img/envelope-at-fill.svg" alt="">
+                <p><strong>Pide una cita</strong> <br>
+                    info@gmail.com</p>
+            </div>
+            <div>
+                <img src="img/clock-fill.svg" alt="">
+                <p><strong>Horario de atención</strong> <br>
+                    Lun-Vie : 8:00am - 6:00pm</p>
+            </div>
+        </section>
+        <section class="seccionConsulta1">
+            <h1>Consulta y pagos</h1>
+        </section>
+        <section class="seccionConsulta2">
+            <div>
+                <h2>Contáctanos te esperamos</h2>
+                <p>Contáctanos. ofrecemos excelentes servicios odontológicos acompañados con los mejores
+                    tratamientos estéticos. Estamos ubicados. Caracas Venezuela. <br> <br>
+
+                    La comunicación entre el especialista y el paciente, es un punto muy importante. De ella depende que
+                    se
+                    construya un canal de confianza entre ambos. Todos queremos saber las respuestas cuando nos atacan
+                    las dudas
+                    o saber qué hacer en un caso específico. <br> <br>
+
+                    ¡Queremos saber en qué podemos ayudarte!, para lograrlo hemos dispuesto de unos números de contacto
+                    para que
+                    estemos al alcance de tu mano. No importa el tipo de afección que tengas, nosotros podemos
+                    resolverlo.</p>
+                <h2>Contáctanos para mayor información</h2>
+                <p>No te quedes con las dudas, somos profesionales y podemos darte las estrategias para que tu salud
+                    bucal la
+                    mantengas y no se deteriore. Es importante que te comuniques con nosotros para convenir la cita y
+                    así
+                    atenderte. En el caso de que tengas alguna emergencia, también estamos prestos a ayudarte. A través
+                    de
+                    WhatsApp citas: 0421-0001122 o envíanos un correo electrónico a: info@gmail.com y con la brevedad
+                    te responderemos.</p>
+                <h2>Dudas frecuentes</h2>
+                <p>En torno al mundo de la odontología se han generado ciertas expectativas y dudas que hace que los
+                    pacientes
+                    se retraigan de visitar al especialista. Queremos aclararlas todas y puedes comunicarte con nosotros
+                    para
+                    lograrlo. Con respecto a las interrogantes estas son las más frecuentes: <br><br>
+
+                    -¿A qué edad es recomendable usar ortodoncia? <br>
+                    -¿La anestesia puede causar daños colaterales? <br>
+                    -¿Los costos de los tratamientos odontológicos son elevados? <br>
+                    -¿Si se cae una calza qué debo hacer? <br>
+                    -¿Cuándo es necesario el tratamiento de conducto? <br> <br>
+
+                    Estas y muchas incógnitas más podemos responderlas si acuerdas una cita con nosotros. Puedes anotar
+                    aquellos
+                    detalles que te hacen sentir ansioso y aclararlas directamente con los expertos que laboran en
+                    BFEsteticaDental desde las 9 de la mañana, hasta las 12 del mediodía, y de 2 a las 6 de la tarde. No
+                    tienes
+                    nada que perder, contáctanos para ayudarte y no te arrepentirás.</p>
+            </div>
+        </section>
+        <section class="seccionConsulta2">
+            <h2>Pide ya tu cita rellenando el siguiente formulario</h2>
+            <form id="appointmentForm" class="row g-3 needs-validation" novalidate>
+                <div class="col-md-4">
+                    <label for="patientName" class="form-label">Nombres</label>
+                    <input type="text" class="form-control" id="patientName" placeholder="Ej: Josmar Alexander"
+                        required>
+                    <div class="valid-feedback">
+                        Nombres Válidos
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="lastName" class="form-label">Apellidos</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Ej: Osorio Diaz" required>
+                    <div class="valid-feedback">
+                        Apellidos Válidos
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="service" class="form-label">Servicio</label>
+                    <select class="form-select" id="service" required>
+                        <option value="">Seleccione un servicio</option>
+                        <option value="Limpieza">Limpieza: 50$</option>
+                        <option value="Extracción">Extracción: 100$</option>
+                        <option value="Ortodoncia">Ortodoncia: 200$</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="appointmentDate" class="form-label">Día de consulta</label>
+                    <input type="date" class="form-control" id="appointmentDate" required>
+                    <div class="invalid-feedback">
+                        Por favor proporciona una fecha válida.
+                    </div>
+                </div>
+
+                <!-- Sección para agregar familiares -->
+                <div id="familyMembers"></div>
+
+                <div class="col-12">
+                    <button type="button" id="addFamilyMember" class="btn btn-secondary">Agregar Familiar</button>
+                </div>
+
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Enviar formulario</button>
+                </div>
+                <div><br></div>
+            </form>
+            <div id="availability"></div>
+            <div id="summary"></div>
+        </section>
+    </main>
+    <section><br></section>
+    <footer>
+        <!--Parte izquierda del footer-->
+        <div id="left-footer"><!--Creamos un menu de navegacion simple para navegar desde el footer-->
+            <h3>Atajos</h3>
+            <ul class="atajos">
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </div>
+        <!--Creamos la parte derecha del footer-->
+        <div id="right-footer"><!--Creamos un menu para compartir las redes sociales-->
+            <h3>Sígenos en</h3>
+            <div id="social-media-footer">
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/?locale=es_LA" target="_blank">
+                            <img class="icono" src="img/facebook.png" alt="icono facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.instagram.com" target="_blank">
+                            <img class="icono" src="img/instragram.png" alt="icono instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+                            <img class="icono" src="img/whatsapp.png" alt="icono whatsapp">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p>Sitio web desarrollado por Josmar Osorio</p>
+        </div>
+    </footer>
+    <script type="module" src="js/validacion.js"></script>
+    <script type="module" src="js/consultaypagos.js"></script>
 </body>
+
 </html>
