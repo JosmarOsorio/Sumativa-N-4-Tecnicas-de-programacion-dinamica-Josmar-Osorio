@@ -4,15 +4,16 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
   }
-  body{
+  body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(/img/FondoLogin.avif) no-repeat;
+    background-image: url(/img/FondoLogin.avif); 
+    background-repeat: no-repeat; 
     background-size: cover;
     background-position: center;
-  }
+}
   .wrapper{
     width: 420px;
     background: transparent;
